@@ -7,7 +7,7 @@ use App\Interfaces\CategoryRepositoryInterface;
 use App\Interfaces\CityRepositoryInterface;
 use Illuminate\Http\Request;
 
-class HomeController extends Controller
+class BoardingHouseController extends Controller
 {
     private CityRepositoryInterface $cityRepository;
     private CategoryRepositoryInterface $categoryRepository;
@@ -23,13 +23,13 @@ class HomeController extends Controller
         $this->boardingHouseRepository = $boardingHouseRepository;
     }
 
-    public function index(){
+
+    public function find()
+    {
         $categories = $this->categoryRepository->getAllCategories();
-        $popularBoardingHouses = $this->boardingHouseRepository->getPopularBoardingHouses();
         $cities = $this->cityRepository->getAllCities();
         $boardingHouses = $this->boardingHouseRepository->getAllBoardingHouses();
 
-        //compact untuk melempar dari categories dll
-        return view('pages.home', compact('categories', 'popularBoardingHouses', 'cities', 'boardingHouses')); 
+        return view('pages.boarding-house.find', compact('categories', 'cities', 'boardingHouses'));
     }
 }
