@@ -14,8 +14,8 @@
     </div>
     <div id="Header" class="relative flex items-center justify-between gap-2 px-5 mt-[18px]">
         <div class="flex flex-col gap-[6px]">
-            <h1 class="font-bold text-[32px] leading-[48px]">Kos in {{ $category->name}}</h1>
-            <p class="text-ngekos-grey">Tersedia {{ $category->boardingHouses->count() }} Kos</p>
+            <h1 class="font-bold text-[32px] leading-[48px]">Kota {{ $city->name}}</h1>
+            <p class="text-ngekos-grey">Tersedia {{ $city->boardingHouses->count() }} Kos</p>
         </div>
         <button class="flex flex-col items-center text-center shrink-0 rounded-[22px] p-[10px_20px] gap-2 bg-white">
             <img src="{{ asset('assets/images/icons/star.svg')}}" class="w-6 h-6" alt="icon">
@@ -23,7 +23,7 @@
         </button>
     </div>
     <section id="Result" class=" relative flex flex-col gap-4 px-5 mt-5 mb-9">
-    @foreach ($boardingHouses as $boardingHouse)
+    @foreach ($city->boardingHouses as $boardingHouse)
     <a href="details.html" class="card">
         <div
             class="flex rounded-[30px] border border-[#F1F2F6] p-4 gap-4 bg-white hover:border-[#91BF77] transition-all duration-300">
@@ -52,5 +52,6 @@
         </div>
     </a>
     @endforeach
+
     </section>
 @endsection
