@@ -14,11 +14,9 @@
         </div>
         <div id="Header" class="relative flex items-center justify-between gap-2 px-5 mt-[18px]">
             <div class="flex w-full rounded-[30px] border border-[#F1F2F6] p-4 gap-4 bg-white">
-                @foreach ($boardingHouse->rooms as $room)
                 <div class="flex w-[120px] h-[132px] shrink-0 rounded-[30px] bg-[#D9D9D9] overflow-hidden">
                     <img src="{{ asset('storage/' .$boardingHouse->thumbnail)}}" class="w-full h-full object-cover" alt="icon">
                 </div>
-                @endforeach
                 <div class="flex flex-col gap-3 w-full">
                     <h1 class="font-semibold text-lg leading-[27px] line-clamp-2 min-h-[54px]">
                         {{ $boardingHouse->name}}
