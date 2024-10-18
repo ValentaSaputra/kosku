@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Interfaces\BoardingHouseRepositoryInterface;
 use App\Interfaces\CategoryRepositoryInterface;
 use App\Interfaces\CityRepositoryInterface;
+use App\Models\BoardingHouse;
 use Illuminate\Http\Request;
 
 class BoardingHouseController extends Controller
@@ -28,6 +29,13 @@ class BoardingHouseController extends Controller
         $boardingHouse = $this->boardingHouseRepository->getBoardingHouseBySlug($slug);
 
         return view('pages.boarding-house.show', compact('boardingHouse'));
+    }
+
+    public function rooms($slug)
+    {
+        $boardingHouse =$this->boardingHouseRepository->getBoardingHouseBySlug($slug);
+
+        return view('pages.boarding-house.rooms', compact('boardingHouse'));
     }
 
     public function find()
