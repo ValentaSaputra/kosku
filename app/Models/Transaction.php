@@ -16,7 +16,7 @@ class Transaction extends Model
         'room_id',
         'name',
         'email',
-        'phone',
+        'phone_number',
         'payment_method',
         'payment_status',
         'start_date',
