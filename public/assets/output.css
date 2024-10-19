@@ -1035,6 +1035,14 @@ video {
   border-color: rgb(255 255 255 / var(--tw-border-opacity));
 }
 
+.border-red-500 {
+  border-color: #ef4444;
+  border-width: 1px;
+  border-style: solid; 
+}
+
+
+
 .\!bg-ngekos-black {
   --tw-bg-opacity: 1 !important;
   background-color: rgb(7 7 7 / var(--tw-bg-opacity)) !important;
@@ -1211,6 +1219,10 @@ video {
 .text-xs {
   font-size: 0.75rem;
   line-height: 1rem;
+}
+
+.text-red-500 {
+  color: #ef4444; /* Warna merah */
 }
 
 .font-bold {
