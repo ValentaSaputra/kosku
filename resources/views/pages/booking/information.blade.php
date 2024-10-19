@@ -42,11 +42,11 @@
                 <p class="font-semibold text-lg leading-[27px]">{{$room->name}}</p>
                 <hr class="border-[#F1F2F6]">
                 <div class="flex items-center gap-[6px]">
-                    <img src="assets/images/icons/profile-2user.svg" class="w-5 h-5 flex shrink-0" alt="icon">
+                    <img src="{{ asset('assets/images/icons/profile-2user.svg')}}" class="w-5 h-5 flex shrink-0" alt="icon">
                     <p class="text-sm text-ngekos-grey">{{$room->capacity}} People</p>
                 </div>
                 <div class="flex items-center gap-[6px]">
-                    <img src="assets/images/icons/3dcube.svg" class="w-5 h-5 flex shrink-0" alt="icon">
+                    <img src="{{ asset('assets/images/icons/3dcube.svg')}}" class="w-5 h-5 flex shrink-0" alt="icon">
                     <p class="text-sm text-ngekos-grey">{{$room->square_feet}} sqft flat</p>
                 </div>
                 <hr class="border-[#F1F2F6]">
